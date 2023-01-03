@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  height: 75vh;
+  width: 50vw;
+  border: 7px #ccc solid;
+  margin: 50px auto;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px #cce;
+  /* position: relative; */
+}
+
+div:hover {
+  overflow: scroll;
+}
+
+ol {
+  list-style-type: "\260E";
+  margin: 0 0 0 50px;
+}
+
+.Alpha {
+  position: sticky;
+  top: 0px;
+  border: 2px solid gray;
+  background-color: rgb(7, 72, 171);
+  color: white;
+  transition: 3s;
+}

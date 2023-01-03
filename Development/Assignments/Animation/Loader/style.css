@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div:nth-last-of-type(1) {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.loader {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border-top: 10px solid lightblue;
+  border-left: 10px solid lawngreen;
+  border-right: 10px solid rgb(255, 0, 0);
+  border-bottom: 10px solid salmon;
+  animation-name: load;
+  animation-timing-function: linear;
+  animation-delay: 0ms;
+  animation-duration: 450ms;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+
+  /* short-hand property */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes load {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
