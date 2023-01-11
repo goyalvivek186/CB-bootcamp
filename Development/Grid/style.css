@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div.container {
+  font-size: 45px;
+  color: rgb(201, 246, 246);
+  background-color: rgb(255, 0, 0);
+  margin: 50px auto;
+  height: 75vh;
+  width: 75vw;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); */
+  row-gap: 5px;
+  column-gap: 5px;
+  overflow: scroll;
+}
+
+div.box {
+  background-color: rgb(100, 35, 35);
+  border: 2px dashed white;
+  height: 50px;
+  width: 150px;
+}
+
+.item1 {
+  /* enter the grid line as imput */
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
