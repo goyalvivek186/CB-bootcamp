@@ -1,13 +1,21 @@
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+let btn = document.querySelector(".btn");
+// console.log(btn);
 
-  say_name() {
-    console.log(`Hi ${this.name}`);
-  }
-}
+let inp = document.querySelector("#inp");
+// console.log(inp);
 
-const p1 = new Person("Vivek", 21);
-const p2 = new Person("Sabeel", 22);
+btn.addEventListener("click", () => {
+  let task = inp.value;
+  console.log(task);
+});
+
+inp.addEventListener("keydown", (e) => {
+  console.log("Pressed", e.key);
+  if (e.key == "Enter") console.log("Enter pressed");
+});
+
+// function myFun(a, b) {
+//   console.log("Fuction Called", a, b);
+// }
+
+// setInterval(myFun, 2000, 5, 10);

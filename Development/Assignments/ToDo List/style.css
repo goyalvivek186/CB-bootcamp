@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  height: 50vh;
+  width: 20vw;
+  margin: 50px auto;
+  border: 1px black solid;
+  box-shadow: 3px 3px 10px #ccc;
+}
+
+section,
+button,
+input {
+  font-size: 20px;
+}
+
+p p {
+  cursor: pointer;
+}
