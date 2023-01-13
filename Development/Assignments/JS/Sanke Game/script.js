@@ -1,15 +1,19 @@
 const canvas = document.getElementById("canvas");
 const pen = canvas.getContext("2d");
-// pen.fillStyle = "yellow";
 let gameSpeed = 150;
 const cs = 67;
 const W = 1200;
 const H = 735;
 let gameOver = true;
 let max_score = 0;
-// let food = null;
+let food = null;
 let score = 0;
 let id = null;
+let easy = document.querySelector(".easy");
+let medium = document.querySelector(".medium");
+let hard = document.querySelector(".hard");
+let reset = document.querySelector(".reset");
+
 let snake = {
   len: 5,
   direction: "Right",
@@ -35,9 +39,6 @@ let snake = {
     for (let i = 0; i < this.cells.length - 1; i++) {
       pen.fillRect(this.cells[i].x * cs, this.cells[i].y * cs, cs - 1, cs - 1);
     }
-    // for (let cell of this.cells) {
-    //   pen.fillRect(cell.x * cs, cell.y * cs, cs - 1, cs - 1);
-    // }
   },
   updateSnake: function () {
     let old_x = this.cells[this.cells.length - 1].x;
@@ -80,8 +81,6 @@ let snake = {
     }
   },
 };
-
-let food = null;
 
 function getRandomFood() {
   var food = {
@@ -133,7 +132,7 @@ function draw() {
   pen.clearRect(0, 0, W, H);
   pen.fillStyle = "yellow";
   pen.font = "40px sans-serif";
-  pen.fillText(`Score ${score}`, 100, 50);
+  pen.fillText(`Score: ${score}`, 100, 50);
   snake.drawSnake();
   pen.fillStyle = "blue";
   pen.fillRect(food.x * cs, food.y * cs, cs - 1, cs - 1);
@@ -161,12 +160,7 @@ function gameLoop() {
 
 init();
 
-//Game Mode selector
-
-let easy = document.querySelector(".easy");
-let medium = document.querySelector(".medium");
-let hard = document.querySelector(".hard");
-let reset = document.querySelector(".reset");
+//Game Mode selector + reset
 
 easy.addEventListener("click", () => {
   if (!gameOver) return;
