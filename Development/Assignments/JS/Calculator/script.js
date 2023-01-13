@@ -18,7 +18,7 @@ function myFun(e) {
     try {
       let ans = eval(eqn);
       screen.value = ans;
-      eqn = "";
+      eqn = ans;
     } catch (error) {
       screen.value = "INVALID OPERATION";
       console.log(error);
