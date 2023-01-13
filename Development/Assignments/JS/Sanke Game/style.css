@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.5s;
+}
+canvas {
+  border: 7px rgb(0, 128, 0) solid;
+  background-color: rgba(0, 0, 0, 0.841);
+  /* display: inline; */
+}
+
+h1,
+.maxScore {
+  font-size: 45px;
+}
+
+div.btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 70px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.818);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3 px #ccc;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.medium {
+  width: 85px;
+}
+
+section.resetcl {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.reset,
+.resercl {
+  display: none;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
