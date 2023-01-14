@@ -46,7 +46,7 @@ function init() {
         // time = 0;
       } else {
         min = Number(inp.value) - 1;
-        // if (Number(inp.value) === NaN) {
+        // if (isNaN(Number(inp.value))) {
         //   alert("Please Enter a valid time.");
         //   resetTimer();
         //   return;
@@ -103,7 +103,13 @@ start.addEventListener("click", main);
 reset.addEventListener("click", resetTimer);
 
 // Working with Enter Key
-inp.addEventListener("keydown", (e) => {
+inp.addEventListener("keyup", (e) => {
   // console.log(e.key);
   if (e.key == "Enter") main();
+
+  if (isNaN(Number(inp.value))) {
+    alert("Please Enter a valid time.");
+    resetTimer();
+    return;
+  }
 });
