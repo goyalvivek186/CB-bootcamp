@@ -46,6 +46,11 @@ function init() {
         // time = 0;
       } else {
         min = Number(inp.value) - 1;
+        // if (Number(inp.value) === NaN) {
+        //   alert("Please Enter a valid time.");
+        //   resetTimer();
+        //   return;
+        // }
         console.log(min, "Minutes");
         time = 1;
         time = min * 60 * 1000;
@@ -60,7 +65,7 @@ function init() {
   }
 }
 
-start.addEventListener("click", () => {
+function main() {
   if (start.innerText == "Start") {
     //time start = true;
     init();
@@ -75,6 +80,30 @@ start.addEventListener("click", () => {
     start.innerText = "Start";
     clearInterval(id);
   }
-});
+}
+
+// start.addEventListener("click", () => {
+// if (start.innerText == "Start") {
+//   //time start = true;
+//   init();
+//   if (time <= 0) return;
+//   console.log("Starting Timer");
+//   start.innerText = "Stop";
+//   id = setInterval(start_timer, 1000);
+// } else {
+//   console.log("In else");
+
+//   // id = null;
+//   start.innerText = "Start";
+//   clearInterval(id);
+// }
+// });
+start.addEventListener("click", main);
 
 reset.addEventListener("click", resetTimer);
+
+// Working with Enter Key
+inp.addEventListener("keydown", (e) => {
+  // console.log(e.key);
+  if (e.key == "Enter") main();
+});
